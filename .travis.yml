@@ -34,4 +34,3 @@ deploy:
   on:
     repo: dream189free/img2latex-mathpix
     branch: master
-    tags: true
