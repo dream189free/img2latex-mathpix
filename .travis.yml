@@ -26,10 +26,12 @@ before_deploy:
 
 deploy:
   provider: releases
+  edge: true
   api_key:
     secure: wZXDf7He3JlS3nckcYVZuDi+zm9e9ObxtL6caX1q4b2+D7/ZQTt7MJkDjJ3ZGfz2sNcMtoLbtrRQigeDWJIXlgTbL1ksbltBYfRdlacU3TUCsKzgIs2333JAVbP7kv+XV6DGxvcyGY+5v3QLnXCJtGBrh8l0rfj2zeZUT6C3AmDaYO1ZSUxibPos/BUkB2qaInpGyj+Zi+WMVWnrMs5n3myFNkVsobGATo0VsJXGNcrjh07h6KKmw/aYTdGb3MBblpBbTInp/ToLDZATFrzjklHjWPHqzTaJIHYqrQx0CiSsDjaust74WmkL6mU64wLQKOQyZu02e5zshSGvff+ju1XFs6uC7jxYEskD6j8gy01NNO1wi6AnfJ5U0BRUxOCGQG/G9a1+TCaY1xl54jw4MJlRrxNzp1f7eF8i6TkCsXu/zjmuONBegFuAWSDygcD+ffXamkNftPYvmKZzkGIJw6wNIgTofbow8lEadKGTmK166FVRzg1bN3+2JDHr7OPxTsU3v/4z1drQX1Z7vQ1ChrtkpaqnYlW9yEcfXCbHBuQGJuzHLruRBVmRop5g9VfNmb4NVpMJHe94JCbb2AfwRkcB66lfMeVcS98YwzoqpX2wPfUKZSnbNJRGWizDM0pNm4QOy08bj4XPvljSEAHLeML9pYhk8Z7DYigFATTD6sQ=
+  file_glob: true
   file: releases/*
   on:
     repo: dream189free/img2latex-mathpix
     branch: master
-  skip_cleanup: 'true'
+    tags: true
